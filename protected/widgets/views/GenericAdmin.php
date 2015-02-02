@@ -38,7 +38,6 @@
 	<?php }
 	if ($filters_ready) { ?>
 		<?= CHtml::beginForm() ?>
-
 		<table class="generic-admin">
 			<thead>
 				<tr>
@@ -84,7 +83,13 @@ if (!$get_row && $filters_ready) {
 						<td>
 							<?php echo CHtml::radioButton('default',!$has_default,array('value' => 'NONE'))?>
 						</td>
+						<?php if ($model::model()->hasAttribute('default')) {?>
+							<td>
+								<?php echo CHtml::radioButton('default',$row->default,array('value' => $i))?>
+							</td>
+						<?php }?>
 					</tr>
+
 				</tfoot>
 			<?php }?>
 		</table>

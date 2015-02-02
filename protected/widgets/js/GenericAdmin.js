@@ -32,8 +32,6 @@ $(document).ready(function() {
 		$(this).closest('tr').remove();
 	});
 
-
-
 	function getNextKey() {
 		var keys = $('table.generic-admin tr').map(function(index, el) {
 			v = parseInt($(el).attr('data-row'));
@@ -80,7 +78,6 @@ $(document).ready(function() {
 
 	$('.generic-admin-add').unbind('click').click(function(e) {
 		e.preventDefault();
-
 
 		var data = {
 			"key" : getNextKey()

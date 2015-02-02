@@ -130,7 +130,6 @@ class BaseAdminController extends BaseController
 							$name = $field['field'];
 							$item->$name = @$_POST[$name][$i];
 						}
-
 						if ($item->hasAttribute('default')) {
 							if (isset($_POST['default']) && $_POST['default'] != 'NONE' && $_POST['default'] == $j) {
 								$item->default = 1;
