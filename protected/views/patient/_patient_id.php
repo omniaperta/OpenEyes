@@ -30,13 +30,13 @@
 		?>
 		<span class="patient-age">(<?php if ($this->patient->isDeceased()) { ?>Deceased<?php } else { echo $this->patient->getAge(); } ?>)</span>
 	</div>
-	<?php if(!Yii::app()->params['hide_missing_demographics'] || $this->patient->getDisplayName()) { ?>
+	<?php if(!Yii::app()->params['hide_missing_demographics'] || $this->patient->hos_num) { ?>
 	<div class="hospital-number">
 		<span class="screen-only">
 			No.
 		</span>
 		<span class="print-only">
-			Hosptial No.
+			Hospital No.
 		</span>
 		<?php echo $this->patient->hos_num?>
 	</div>
