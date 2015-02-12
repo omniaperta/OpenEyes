@@ -310,6 +310,7 @@ return array(
 		'wkhtmltopdf_nice_level' => false,
 		'hide_missing_demographics' => false,
 		'hide_patientsummary_forms'=> false,
+		'gp_warnings' => true,
 		'search_tabs' => array(
 			'main' => array(
 				'title' => 'OpenEyes search',

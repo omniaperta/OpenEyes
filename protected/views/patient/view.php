@@ -53,7 +53,7 @@ $warnings = $this->patient->getWarnings($clinical);
 			</div>
 		<?php }?>
 
-		<?php if (!$this->patient->practice || !$this->patient->practice->contact->address) {?>
+		<?php if (Yii::app()->params['gp_warnings'] && (!$this->patient->practice || !$this->patient->practice->contact->address)) {?>
 			<div class="row">
 				<div class="large-12 column">
 					<div id="no-practice-address" class="alert-box alert with-icon">
