@@ -35,6 +35,16 @@
 			</div>
 		</div>
 		<?php }
+		if(!Yii::app()->params['hide_missing_demographics'] || $this->patient->contact->other_names) { ?>
+			<div class="row data-row">
+				<div class="large-4 column">
+					<div class="data-label">Other name(s):</div>
+				</div>
+				<div class="large-8 column">
+					<div class="data-value"><?= CHtml::encode($this->patient->contact->other_names) ?></div>
+				</div>
+			</div>
+		<?php }
 		if(!Yii::app()->params['hide_missing_demographics'] || $this->patient->last_name) { ?>
 		<div class="row data-row">
 			<div class="large-4 column">
